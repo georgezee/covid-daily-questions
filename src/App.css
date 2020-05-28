@@ -54,6 +54,10 @@
   margin: 5px 20px 20px 0;
 }
 
+.App-button-selected {
+  border-width: 4px;
+}
+
 .Status-ok {
   background-color: #8CC152;
 }

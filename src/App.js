@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       displayStatus: "questions",
+      answers: ["","","","","","","","",""],
       questions: [
         [
           {
@@ -34,8 +35,8 @@ class App extends React.Component {
         [
           {
             "question" : "Do you feel week and tired today?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
+            "accepted" : "No",
+            "cautioned" : "Yes",
           }
         ],
         [
@@ -84,14 +85,47 @@ class App extends React.Component {
   }
 
   checkAnswers = () => {
-    this.setState({ displayStatus: "ok" });
+    let acceptCount = 0;
+    let cautionCount = 0;
+    let emptyCount = 0;
+
+    for (var i = 0; i < this.state.answers.length; i++) {
+      if (this.state.answers[i] === "accept") {
+        acceptCount++;
+      } else if (this.state.answers[i] === "caution") {
+        cautionCount++;
+      } else {
+        emptyCount++;
+      }
+    }
+
+    console.log(acceptCount + "|" + cautionCount + "|" + emptyCount);
+    if (emptyCount > 0) {
+      console.log("Not all questions answered!");
+      return;
+    } else if (cautionCount > 0) {
+      this.setState({ displayStatus: "caution" });
+      return;
+    } else {
+      this.setState({ displayStatus: "ok" });
+      return;
+    }
+
   };
+
+  handleAnswer = (questionID, answerStatus) => {
+    console.log("answered: " + questionID + "|" + answerStatus);
+    let answers = [...this.state.answers];
+    answers[questionID] = answerStatus;
+    this.setState({answers});
+    console.log(this.state.answers);
+  }
 
   render() {
 
     let output = '';
     if (this.state.displayStatus === "questions") {
-      output = <QuestionDisplay questions={this.state.questions} handleClick={this.checkAnswers} />;
+      output = <QuestionDisplay questions={this.state.questions} answers={this.state.answers} handleAnswer={this.handleAnswer} handleClick={this.checkAnswers} />;
     } else {
       output = <StatusDisplay status={this.state.displayStatus}/>;
     }

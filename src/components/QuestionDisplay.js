@@ -19,8 +19,8 @@ class QuestionDisplay extends React.Component {
           return (
             <div key={i} className="App-question">
               <Question title={alternatives[0].question} />
-              <AnswerButton title={alternatives[0].accepted} />
-              <AnswerButton title={alternatives[0].cautioned} />
+              <AnswerButton answerState={this.props.answers[i]} title={alternatives[0].accepted} questionID={i} answerType={'accept'} handleAnswer={this.props.handleAnswer}/>
+              <AnswerButton answerState={this.props.answers[i]} title={alternatives[0].cautioned} questionID={i} answerType={'caution'} handleAnswer={this.props.handleAnswer}/>
             </div>
           )
         })}
