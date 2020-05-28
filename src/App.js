@@ -12,22 +12,22 @@ class App extends React.Component {
         [
           {
             "question" : "Do you have a high temperature?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
+            "accepted" : "No",
+            "cautioned" : "Yes",
           }
         ],
         [
           {
             "question" : "Do you have a cough?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
+            "accepted" : "No",
+            "cautioned" : "Yes",
           }
         ],
         [
           {
             "question" : "Do you have a sore throat?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
+            "accepted" : "No",
+            "cautioned" : "Yes",
           }
         ],
         [
@@ -67,15 +67,15 @@ class App extends React.Component {
         [
           {
             "question" : "Have you been in contact with anyone who has tested positive for Covid 19 within the past 14 days?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
+            "accepted" : "No",
+            "cautioned" : "Yes",
           }
         ],
         [
           {
             "question" : "Are any members of your household suffering from any of these symptoms?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
+            "accepted" : "No",
+            "cautioned" : "Yes",
           }
         ],
       ]
