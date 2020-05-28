@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import DateToday from './components/DateToday';
-import AnswerButton from './components/AnswerButton';
-import Question from './components/Question';
+
+import QuestionDisplay from './components/QuestionDisplay';
+import StatusDisplay from './components/StatusDisplay';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      displayStatus: 0,
       questions: [
         [
           {
@@ -83,25 +84,16 @@ class App extends React.Component {
   }
 
   render() {
-    let questions = this.state.questions;
+
+    let output = '';
+    if (this.state.displayStatus === 0) {
+      output = <QuestionDisplay questions={this.state.questions}/>;
+    } else {
+      output = <StatusDisplay status="ok"/>;
+    }
     return (
           <div className="App">
-            <header className="App-header">
-              <p>
-                <DateToday/>
-              </p>
-            </header>
-            <div className="App-main">
-            {questions.map((alternatives, i) => {
-              return (
-                <div>
-                  <Question key={i} title={alternatives[0].question} />
-                  <AnswerButton title={alternatives[0].accepted} />
-                  <AnswerButton title={alternatives[0].cautioned} />
-                </div>
-              )
-            })}
-            </div>
+           {output}
           </div>
         );
   }
