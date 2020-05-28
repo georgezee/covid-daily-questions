@@ -11,10 +11,39 @@ class App extends React.Component {
       questions: [
         [
           {
+            "question" : "Do you have a high temperature?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
+            "question" : "Do you have a cough?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
+            "question" : "Do you have a sore throat?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
+            "question" : "Do you feel week and tired today?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
             "question" : "Do you have difficulty breathing?",
             "accepted" : "No",
             "cautioned" : "Yes"
           },
+          // Alternate Question
           {
             "question" : "Does your breathing feel normal?",
             "accepted" : "Yes",
@@ -24,6 +53,27 @@ class App extends React.Component {
         [
           {
             "question" : "Can you taste food and drinks normally?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
+            "question" : "Can you smell normally?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
+            "question" : "Have you been in contact with anyone who has tested positive for Covid 19 within the past 14 days?",
+            "accepted" : "Yes",
+            "cautioned" : "No",
+          }
+        ],
+        [
+          {
+            "question" : "Are any members of your household suffering from any of these symptoms?",
             "accepted" : "Yes",
             "cautioned" : "No",
           }
