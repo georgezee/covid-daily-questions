@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NextButton = () => {
+const NextButton = (props) => {
   return (
-    <div>
+    <div className="App-button" onClick={props.handleClick}>
       Next
     </div>
   )

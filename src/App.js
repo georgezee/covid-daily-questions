@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayStatus: 0,
+      displayStatus: "questions",
       questions: [
         [
           {
@@ -83,13 +83,17 @@ class App extends React.Component {
     };
   }
 
+  checkAnswers = () => {
+    this.setState({ displayStatus: "ok" });
+  };
+
   render() {
 
     let output = '';
-    if (this.state.displayStatus === 0) {
-      output = <QuestionDisplay questions={this.state.questions}/>;
+    if (this.state.displayStatus === "questions") {
+      output = <QuestionDisplay questions={this.state.questions} handleClick={this.checkAnswers} />;
     } else {
-      output = <StatusDisplay status="ok"/>;
+      output = <StatusDisplay status={this.state.displayStatus}/>;
     }
     return (
           <div className="App">

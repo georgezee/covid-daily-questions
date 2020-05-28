@@ -2,7 +2,7 @@ import React from 'react';
 
 const AnswerButton = ({title}) => {
   return (
-    <div>
+    <div className="App-button">
       {title}
     </div>
   )

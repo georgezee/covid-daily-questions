@@ -2,9 +2,16 @@ import React from 'react';
 import DateToday from './DateToday';
 
 const StatusDisplay = ({status}) => {
-  const colourOK = "#8CC152";
+
+  let statusClass = "App-main";
+  if (status === "ok") {
+    statusClass += " Status-ok";
+  } else {
+    statusClass += " Status-caution";
+  }
+
   return (
-    <div className="App-main" style={{backgroundColor: colourOK}}>
+    <div className={statusClass}>
       <DateToday/>
       {status}
     </div>

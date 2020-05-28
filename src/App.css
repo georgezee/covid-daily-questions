@@ -33,11 +33,35 @@
   justify-content: center;
   font-size: calc(10px + 1.2vmin);
   color: white;
+  text-align: left;
+  padding-left: 30px;
 }
 
 .App-link {
   color: #61dafb;
 }
+
+.App-question {
+  width: 100%;
+}
+
+.App-button {
+  border: solid grey 1px;
+  min-width: 80px;
+  text-align: center;
+  float: left;
+  padding: 5px;
+  margin: 5px 20px 20px 0;
+}
+
+.Status-ok {
+  background-color: #8CC152;
+}
+
+.Status-caution {
+  background-color: #ed4242;
+}
+
 
 @keyframes App-logo-spin {
   from {

@@ -4,30 +4,33 @@ import AnswerButton from './AnswerButton';
 import Question from './Question';
 import NextButton from './NextButton';
 
-const QuestionDisplay = ({questions}) => {
-  return (
-    <div>
-      <header className="App-header">
-      <p>
-        <DateToday/>
-      </p>
-      </header>
-      <div className="App-main">
-      {questions.map((alternatives, i) => {
-      return (
+class QuestionDisplay extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <header className="App-header">
         <div>
-          <Question key={i} title={alternatives[0].question} />
-          <AnswerButton title={alternatives[0].accepted} />
-          <AnswerButton title={alternatives[0].cautioned} />
+          <DateToday/>
         </div>
-      )
-      })}
+        </header>
+        <div className="App-main">
+        {this.props.questions.map((alternatives, i) => {
+          return (
+            <div key={i} className="App-question">
+              <Question title={alternatives[0].question} />
+              <AnswerButton title={alternatives[0].accepted} />
+              <AnswerButton title={alternatives[0].cautioned} />
+            </div>
+          )
+        })}
 
-      <NextButton/>
+        <NextButton handleClick={this.props.handleClick}/>
 
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
  }
 
 export default QuestionDisplay;
