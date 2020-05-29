@@ -34,7 +34,7 @@ class App extends React.Component {
         ],
         [
           {
-            "question" : "Do you feel week and tired today?",
+            "question" : "Do you feel weak and tired today?",
             "accepted" : "No",
             "cautioned" : "Yes",
           }
