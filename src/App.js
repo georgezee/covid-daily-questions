@@ -10,19 +10,40 @@ class App extends React.Component {
     var questionList = require('./Questions.json');
     // Create an empty list of answers matching the question count.
     var answerList = questionList.map((alternatives, i) => {return ""});
-    console.log(answerList);
+
+    let todaysDate = new Date().getDate();
     this.state = {
       displayStatus: "questions",
       highlightMissing: false,
       answers: answerList,
-      questions: questionList
+      questions: questionList,
+      dayCompleted: todaysDate
     };
+
+    // Set up event handler to check date change on focus event.
+    const self = this;
+    window.addEventListener("focus", function(event)
+    {
+      const dateNow = new Date().getDate();
+      // Reset the page if the date changes.
+      if (dateNow !== self.state.dayCompleted) {
+        self.setState({
+          displayStatus: "questions",
+          highlightMissing: false,
+          answers: answerList,
+          dayCompleted: dateNow
+        });
+      }
+    }, false);
   }
 
   checkAnswers = () => {
     let acceptCount = 0;
     let cautionCount = 0;
     let emptyCount = 0;
+
+    // Ensure todays date is saved.
+    this.setState({dayCompleted: new Date().getDate()});
 
     for (var i = 0; i < this.state.answers.length; i++) {
       if (this.state.answers[i] === "accept") {
