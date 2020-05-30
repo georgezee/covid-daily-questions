@@ -32,11 +32,6 @@
       "question" : "Do you have difficulty breathing?",
       "accepted" : "No",
       "cautioned" : "Yes"
-    },
-    {
-      "question" : "Does your breathing feel normal?",
-      "accepted" : "Yes",
-      "cautioned" : "No"
     }
   ],
   [

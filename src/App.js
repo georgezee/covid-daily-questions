@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props);
     var questionList = require('./Questions.json');
     // Create an empty list of answers matching the question count.
-    var answerList = questionList.map((alternatives, i) => {return ""});
+    var answerList = questionList.map((item, i) => {return ""});
 
     let todaysDate = new Date().getDate();
     this.state = {

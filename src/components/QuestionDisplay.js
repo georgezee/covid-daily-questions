@@ -29,7 +29,12 @@ class QuestionDisplay extends React.Component {
         </div>
         </header>
         <div className="App-main">
-        {this.props.questions.map((alternatives, i) => {
+        {this.props.questions.map((itemArray, i) => {
+
+          // Questions kept in an array to allow future alternate question phrasing per question.
+          // Until then, we take the first item.
+          let item = itemArray[0];
+
           let className = "App-question";
           if (this.props.highlightMissing) {
             if (this.props.answers[i] === "") {
@@ -39,7 +44,7 @@ class QuestionDisplay extends React.Component {
 
           const acceptAnswer = <AnswerButton
             answerState={this.props.answers[i]}
-            title={alternatives[0].accepted}
+            title={item.accepted}
             questionID={i}
             answerType={'accept'}
             handleAnswer={this.props.handleAnswer}
@@ -47,7 +52,7 @@ class QuestionDisplay extends React.Component {
 
           const cautionAnswer = <AnswerButton
             answerState={this.props.answers[i]}
-            title={alternatives[0].cautioned}
+            title={item.cautioned}
             questionID={i}
             answerType={'caution'}
             handleAnswer={this.props.handleAnswer}
@@ -66,7 +71,7 @@ class QuestionDisplay extends React.Component {
 
           return (
             <div key={i} className={className}>
-              <Question title={alternatives[0].question} />
+              <Question title={item.question} />
               {firstAnswer}
               {secondAnswer}
             </div>
