@@ -7,81 +7,15 @@ import StatusDisplay from './components/StatusDisplay';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    var questionList = require('./Questions.json');
+    // Create an empty list of answers matching the question count.
+    var answerList = questionList.map((alternatives, i) => {return ""});
+    console.log(answerList);
     this.state = {
       displayStatus: "questions",
       highlightMissing: false,
-      answers: ["","","","","","","","",""],
-      questions: [
-        [
-          {
-            "question" : "Do you have a high temperature?",
-            "accepted" : "No",
-            "cautioned" : "Yes",
-          }
-        ],
-        [
-          {
-            "question" : "Do you have a cough?",
-            "accepted" : "No",
-            "cautioned" : "Yes",
-          }
-        ],
-        [
-          {
-            "question" : "Do you have a sore throat?",
-            "accepted" : "No",
-            "cautioned" : "Yes",
-          }
-        ],
-        [
-          {
-            "question" : "Do you feel weak and tired today?",
-            "accepted" : "No",
-            "cautioned" : "Yes",
-          }
-        ],
-        [
-          {
-            "question" : "Do you have difficulty breathing?",
-            "accepted" : "No",
-            "cautioned" : "Yes"
-          },
-          // Alternate Question
-          {
-            "question" : "Does your breathing feel normal?",
-            "accepted" : "Yes",
-            "cautioned" : "No"
-          }
-        ],
-        [
-          {
-            "question" : "Can you taste food and drinks normally?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
-          }
-        ],
-        [
-          {
-            "question" : "Can you smell normally?",
-            "accepted" : "Yes",
-            "cautioned" : "No",
-          }
-        ],
-        [
-          {
-            "question" : "Have you been in contact with anyone who has tested positive for Covid 19 within the past 14 days?",
-            "accepted" : "No",
-            "cautioned" : "Yes",
-          }
-        ],
-        [
-          {
-            "question" : "Are any members of your household suffering from any of these symptoms?",
-            "accepted" : "No",
-            "cautioned" : "Yes",
-          }
-        ],
-      ]
+      answers: answerList,
+      questions: questionList
     };
   }
 
