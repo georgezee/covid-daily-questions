@@ -71,11 +71,19 @@ class App extends React.Component {
   };
 
   handleAnswer = (questionID, answerStatus) => {
-    console.log("answered: " + questionID + "|" + answerStatus);
     let answers = [...this.state.answers];
     answers[questionID] = answerStatus;
     this.setState({answers});
-    console.log(this.state.answers);
+
+    if (this.state.highlightMissing) {
+      for (var i = 0; i < answers.length; i++) {
+        if (answers[i] === "") {
+          return;
+        }
+      }
+      // If we reached here, there are no missing answers.
+      this.setState({highlightMissing: false});
+    }
   }
 
   switchDisplay = () => {
