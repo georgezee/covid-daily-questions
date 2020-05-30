@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       displayStatus: "questions",
+      highlightMissing: false,
       answers: ["","","","","","","","",""],
       questions: [
         [
@@ -102,6 +103,7 @@ class App extends React.Component {
     console.log(acceptCount + "|" + cautionCount + "|" + emptyCount);
     if (emptyCount > 0) {
       console.log("Not all questions answered!");
+      this.setState({highlightMissing: true});
       return;
     } else if (cautionCount > 0) {
       this.setState({ displayStatus: "caution" });
@@ -125,7 +127,13 @@ class App extends React.Component {
 
     let output = '';
     if (this.state.displayStatus === "questions") {
-      output = <QuestionDisplay questions={this.state.questions} answers={this.state.answers} handleAnswer={this.handleAnswer} handleClick={this.checkAnswers} />;
+      output = <QuestionDisplay
+        questions={this.state.questions}
+        answers={this.state.answers}
+        handleAnswer={this.handleAnswer}
+        handleClick={this.checkAnswers}
+        highlightMissing={this.state.highlightMissing}
+      />;
     } else {
       output = <StatusDisplay status={this.state.displayStatus}/>;
     }

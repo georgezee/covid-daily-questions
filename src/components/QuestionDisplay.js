@@ -15,6 +15,12 @@ class QuestionDisplay extends React.Component {
   }
 
   render() {
+    let missingAnswersMessage = "";
+
+    if (this.props.highlightMissing) {
+      missingAnswersMessage = <div className="App-question-missing">Answer the missing questions to proceed.</div>
+    }
+
     return (
       <div>
         <header className="App-header">
@@ -24,6 +30,13 @@ class QuestionDisplay extends React.Component {
         </header>
         <div className="App-main">
         {this.props.questions.map((alternatives, i) => {
+          let className = "App-question";
+          if (this.props.highlightMissing) {
+            if (this.props.answers[i] === "") {
+              className += " App-question-missing";
+            }
+          }
+
           const acceptAnswer = <AnswerButton
             answerState={this.props.answers[i]}
             title={alternatives[0].accepted}
@@ -52,7 +65,7 @@ class QuestionDisplay extends React.Component {
           }
 
           return (
-            <div key={i} className="App-question">
+            <div key={i} className={className}>
               <Question title={alternatives[0].question} />
               {firstAnswer}
               {secondAnswer}
@@ -60,6 +73,7 @@ class QuestionDisplay extends React.Component {
           )
         })}
 
+        {missingAnswersMessage}
         <NextButton handleClick={this.props.handleClick}/>
 
         </div>
