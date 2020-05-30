@@ -123,6 +123,10 @@ class App extends React.Component {
     console.log(this.state.answers);
   }
 
+  switchDisplay = () => {
+    this.setState({ displayStatus: "questions" });
+  }
+
   render() {
 
     let output = '';
@@ -135,7 +139,10 @@ class App extends React.Component {
         highlightMissing={this.state.highlightMissing}
       />;
     } else {
-      output = <StatusDisplay status={this.state.displayStatus}/>;
+      output = <StatusDisplay
+        status={this.state.displayStatus}
+        handleBack={this.switchDisplay}
+      />;
     }
     return (
           <div className="App">
