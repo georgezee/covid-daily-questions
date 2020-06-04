@@ -3,6 +3,8 @@ import './App.css';
 
 import QuestionDisplay from './components/QuestionDisplay';
 import StatusDisplay from './components/StatusDisplay';
+import AboutPage from './components/AboutPage';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +19,8 @@ class App extends React.Component {
       highlightMissing: false,
       answers: answerList,
       questions: questionList,
-      dayCompleted: todaysDate
+      dayCompleted: todaysDate,
+      aboutDisplay: false,
     };
 
     // Set up event handler to check date change on focus event.
@@ -86,6 +89,12 @@ class App extends React.Component {
     }
   }
 
+  handleAboutClick = () => {
+    const currentState = this.state.aboutDisplay;
+    // Toggle the visibility of the About block.
+    this.setState({aboutDisplay:!currentState});
+  }
+
   switchDisplay = () => {
     this.setState({ displayStatus: "questions" });
   }
@@ -112,6 +121,8 @@ class App extends React.Component {
     return (
           <div className="App">
            {output}
+           <AboutPage visible={this.state.aboutDisplay} handleClick={this.handleAboutClick}/>
+           <Footer handleClick={this.handleAboutClick}/>
           </div>
         );
   }
