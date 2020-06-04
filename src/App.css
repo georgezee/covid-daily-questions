@@ -62,6 +62,10 @@
   padding: 1px;
 }
 
+.App-result-counter {
+  border: solid grey 1px;
+}
+
 .App-question-missing {
   border: solid #ffb700 1px;
 }

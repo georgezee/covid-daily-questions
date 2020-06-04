@@ -61,10 +61,10 @@ class App extends React.Component {
       this.setState({highlightMissing: true});
       return;
     } else if (cautionCount > 0) {
-      this.setState({ displayStatus: "caution" });
+      this.setState({ displayStatus: "caution", acceptCount: acceptCount, cautionCount: cautionCount });
       return;
     } else {
-      this.setState({ displayStatus: "ok" });
+      this.setState({ displayStatus: "ok", acceptCount: acceptCount, cautionCount: cautionCount });
       return;
     }
 
@@ -105,6 +105,8 @@ class App extends React.Component {
       output = <StatusDisplay
         status={this.state.displayStatus}
         handleBack={this.switchDisplay}
+        acceptCount={this.state.acceptCount}
+        cautionCount={this.state.cautionCount}
       />;
     }
     return (
