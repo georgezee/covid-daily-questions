@@ -61,10 +61,9 @@ class QuestionDisplay extends React.Component {
           let firstAnswer = acceptAnswer;
           let secondAnswer = cautionAnswer;
 
-          // The seed changes every day, ensuring the button placement is not always consistent.
-          let seed = i + new Date().getDate();
-          // We have a 50% chance of switching the answers around.
-          if (this.seededRandom(seed) > 0.5) {
+          // Show a consistent layout.
+          // i.e. Yes as second answer.
+          if (item.accepted === "Yes") {
             firstAnswer = cautionAnswer;
             secondAnswer = acceptAnswer;
           }
