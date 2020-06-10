@@ -1,6 +1,9 @@
+$primaryColor: #2897EB;
+$primaryDark: #0B4467;
+
 .App {
   text-align: center;
-  background-color: #69676A;
+  background-color: #7F7E80;
   color: white;
 }
 
@@ -22,7 +25,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: #CF5816;    /* #167e16 */
+  background-color: $primaryColor;
   color: #ffffff;
   position: relative;
 
@@ -48,9 +51,9 @@
   margin-top: 6%;
 
   .App-button {
-    border: solid #cf5816 2px;
-    background: #cf5816;
-    box-shadow: 2px 2px 2px #672c0b;
+    border: solid $primaryColor 2px;
+    background: $primaryColor;
+    box-shadow: 2px 2px 2px $primaryDark;
     min-width: 90px;
     text-align: center;
     padding: 5px;
@@ -69,21 +72,21 @@
 
 .App-footer {
   min-height: 5vh;
-  background-color: #CF5816;
+  background-color: $primaryColor;
   display: inline-block;
   width: 100%;
 
   .App-button {
-    border: solid #cf5816 2px;
-    background: #cf5816;
-    box-shadow: 2px 2px 2px #672c0b;
+    border: solid $primaryColor 2px;
+    background: $primaryColor;
+    box-shadow: 2px 2px 2px $primaryDark;
     min-width: 90px;
     text-align: center;
     padding: 5px;
     margin: 15px 20px 25px 20px;
     float: left;
     border-radius: 2px;
-  
+
     &:hover {
      cursor: pointer;
     }
@@ -105,14 +108,14 @@
   font-size: 4vh;
 
   a {
-    color: #CF5816;
+    color: $primaryColor;
     text-decoration: none;
   }
 
   .App-button {
-    border: solid #cf5816 2px;
-    background: #cf5816;
-    box-shadow: 2px 2px 2px #672c0b;
+    border: solid $primaryColor 2px;
+    background: $primaryColor;
+    box-shadow: 2px 2px 2px $primaryDark;
     color: #fff;
     min-width: 90px;
     text-align: center;
@@ -129,14 +132,14 @@
 .App-question {
   width: 100%;
   div:first-child {
-    text-align: left;  
+    text-align: left;
   }
 }
 
 /*.App-button {
-  border: solid #cf5816 2px;
-  background: #cf5816;
-  box-shadow: 2px 2px 2px #672c0b;
+  border: solid #2897EB 2px;
+  background: #2897EB;
+  box-shadow: 2px 2px 2px #0B4467;
   min-width: 90px;
   text-align: center;
   padding: 5px;
@@ -204,7 +207,7 @@
     margin: 0;
     bottom: 4vh;
   }
-} 
+}
 
 @keyframes App-logo-spin {
   from {
