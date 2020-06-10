@@ -51,22 +51,9 @@ $primaryDark: #0B4467;
   margin-top: 6%;
 
   .App-button {
-    border: solid $primaryColor 2px;
-    background: $primaryColor;
-    box-shadow: 2px 2px 2px $primaryDark;
-    min-width: 90px;
-    text-align: center;
-    padding: 5px;
     margin: 15px 20px 30px 20px;
     display: inline-block;
-    border-radius: 2px;
     line-height: 120%;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-
   }
 }
 
@@ -77,19 +64,9 @@ $primaryDark: #0B4467;
   width: 100%;
 
   .App-button {
-    border: solid $primaryColor 2px;
-    background: $primaryColor;
-    box-shadow: 2px 2px 2px $primaryDark;
     min-width: 90px;
-    text-align: center;
-    padding: 5px;
     margin: 15px 20px 25px 20px;
     float: left;
-    border-radius: 2px;
-
-    &:hover {
-     cursor: pointer;
-    }
 
     &:nth-child(10) {
       margin-right: 5px;
@@ -113,15 +90,7 @@ $primaryDark: #0B4467;
   }
 
   .App-button {
-    border: solid $primaryColor 2px;
-    background: $primaryColor;
-    box-shadow: 2px 2px 2px $primaryDark;
-    color: #fff;
-    min-width: 90px;
-    text-align: center;
-    padding: 5px;
     margin: 40px 20px 25px 20px;
-    border-radius: 2px;
   }
 }
 
@@ -136,26 +105,29 @@ $primaryDark: #0B4467;
   }
 }
 
-/*.App-button {
-  border: solid #2897EB 2px;
-  background: #2897EB;
-  box-shadow: 2px 2px 2px #0B4467;
+.App-button {
+  border: solid $primaryColor 2px;
+  background-color: $primaryColor;
+  color: #fff;
+  box-shadow: 2px 2px 2px $primaryDark;
   min-width: 90px;
   text-align: center;
   padding: 5px;
-  margin: 15px 20px 30px 20px;
   display: inline-block;
   border-radius: 2px;
-}
-.App-button:hover {
-  cursor: pointer;
+  line-height: 120%;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.App-button-selected {
-  border-width: 4px;
-  padding: 1px;
+.App-button-large {
+  padding: 12px 30px;
+  font-size: 120%;
+  background-color: #2081ca;
 }
-*/
+
 .App-result-counter {
   border: solid grey 1px;
 }
@@ -174,10 +146,7 @@ $primaryDark: #0B4467;
   }
 }
 
-
-.Status-ok {
-  background-color: #097732;
-  background-image: url("Images/check-circle-014B1C.svg");
+.Status-display {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 58vh;
@@ -192,21 +161,14 @@ $primaryDark: #0B4467;
   }
 }
 
+.Status-ok {
+  background-color: #097732;
+  background-image: url("Images/check-circle-014B1C.svg");
+}
+
 .Status-caution {
   background-color: #721f11;
   background-image: url("Images/delete_Circle-X_9E1905.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 53vh;
-  position: relative;
-  font-size: calc(10px + 2vmin);
-  line-height: 5vh;
-
-  .App-button {
-    position: absolute;
-    margin: 0;
-    bottom: 4vh;
-  }
 }
 
 @keyframes App-logo-spin {

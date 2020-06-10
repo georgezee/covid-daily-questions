@@ -5,7 +5,7 @@ import BackButton from './BackButton';
 
 const StatusDisplay = ({status, handleBack, acceptCount, cautionCount}) => {
 
-  let statusClass = "App-main";
+  let statusClass = "App-main Status-display";
   if (status === "ok") {
     statusClass += " Status-ok";
   } else {
