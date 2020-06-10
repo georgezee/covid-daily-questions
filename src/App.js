@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 import QuestionDisplay from './components/QuestionDisplay';
 import StatusDisplay from './components/StatusDisplay';
