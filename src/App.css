@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #69676A;
+  background-color: rgb(127, 126, 128);
   color: white; }
 
 .App-logo {
@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: #CF5816;
+  background-color: #2897eb;
   /* #167e16 */
   color: #ffffff;
   position: relative; }
@@ -39,9 +39,9 @@
   padding: 0 5vw;
   margin-top: 2%; }
   .App-main .App-button {
-    border: solid #cf5816 2px;
-    background: #cf5816;
-    box-shadow: 2px 2px 2px #672c0b;
+    border: solid #2897eb 2px;
+    background: #2897eb;
+    box-shadow: 2px 2px 2px #0b4467;
     min-width: 90px;
     text-align: center;
     padding: 5px;
@@ -53,13 +53,13 @@
 
 .App-footer {
   min-height: 5vh;
-  background-color: #CF5816;
+  background-color: #2897eb;
   display: inline-block;
   width: 100%; }
   .App-footer .App-button {
-    border: solid #cf5816 2px;
-    background: #cf5816;
-    box-shadow: 2px 2px 2px #672c0b;
+    border: solid #2897eb 2px;
+    background: #2897eb;
+    box-shadow: 2px 2px 2px #0b4467;
     min-width: 90px;
     text-align: center;
     padding: 5px;
@@ -81,12 +81,12 @@
   color: #69676A;
   font-size: 4vh; }
   .App-about-page a {
-    color: #CF5816;
+    color: #2897eb;
     text-decoration: none; }
   .App-about-page .App-button {
-    border: solid #cf5816 2px;
-    background: #cf5816;
-    box-shadow: 2px 2px 2px #672c0b;
+    border: solid #2897eb 2px;
+    background: #2897eb;
+    box-shadow: 2px 2px 2px #0b4467;
     color: #fff;
     min-width: 90px;
     text-align: center;
@@ -103,9 +103,9 @@
     text-align: left; }
 
 /*.App-button {
-  border: solid #cf5816 2px;
-  background: #cf5816;
-  box-shadow: 2px 2px 2px #672c0b;
+  border: solid #2897eb 2px;
+  background: #2897eb;
+  box-shadow: 2px 2px 2px #0b4467;
   min-width: 90px;
   text-align: center;
   padding: 5px;
