@@ -1,15 +1,19 @@
 .App {
   text-align: center;
   background-color: #69676A;
-  color: white; }
+  color: white;
+}
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear; } }
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
 .App-header {
   min-height: 10vh;
@@ -18,14 +22,18 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: #CF5816;
-  /* #167e16 */
+  background-color: #CF5816;    /* #167e16 */
   color: #ffffff;
-  position: relative; }
-  .App-header div {
-    display: inline-flex; }
-    .App-header div:nth-child(1) {
-      margin-right: 5px; }
+  position: relative;
+
+  div {
+    display: inline-flex;
+
+    &:nth-child(1) {
+      margin-right: 5px;
+    }
+  }
+}
 
 .App-main {
   min-height: 85vh;
@@ -37,8 +45,9 @@
   color: white;
   text-align: center;
   padding: 0 5vw;
-  margin-top: 2%; }
-  .App-main .App-button {
+  margin-top: 2%;
+
+  .App-button {
     border: solid #cf5816 2px;
     background: #cf5816;
     box-shadow: 2px 2px 2px #672c0b;
@@ -47,16 +56,23 @@
     padding: 5px;
     margin: 15px 20px 30px 20px;
     display: inline-block;
-    border-radius: 2px; }
-    .App-main .App-button:hover {
-      cursor: pointer; }
+    border-radius: 2px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+
+  }
+}
 
 .App-footer {
   min-height: 5vh;
   background-color: #CF5816;
   display: inline-block;
-  width: 100%; }
-  .App-footer .App-button {
+  width: 100%;
+
+  .App-button {
     border: solid #cf5816 2px;
     background: #cf5816;
     box-shadow: 2px 2px 2px #672c0b;
@@ -65,11 +81,17 @@
     padding: 5px;
     margin: 15px 20px 25px 20px;
     float: left;
-    border-radius: 2px; }
-    .App-footer .App-button:hover {
-      cursor: pointer; }
-    .App-footer .App-button:nth-child(10) {
-      margin-right: 5px; }
+    border-radius: 2px;
+  
+    &:hover {
+     cursor: pointer;
+    }
+
+    &:nth-child(10) {
+      margin-right: 5px;
+    }
+  }
+}
 
 .App-about-page {
   position: fixed;
@@ -79,11 +101,14 @@
   overflow: scroll;
   background-color: #BCBBA9;
   color: #69676A;
-  font-size: 4vh; }
-  .App-about-page a {
+  font-size: 4vh;
+
+  a {
     color: #CF5816;
-    text-decoration: none; }
-  .App-about-page .App-button {
+    text-decoration: none;
+  }
+
+  .App-button {
     border: solid #cf5816 2px;
     background: #cf5816;
     box-shadow: 2px 2px 2px #672c0b;
@@ -92,15 +117,20 @@
     text-align: center;
     padding: 5px;
     margin: 40px 20px 25px 20px;
-    border-radius: 2px; }
+    border-radius: 2px;
+  }
+}
 
 .App-link {
-  color: #61dafb; }
+  color: #61dafb;
+}
 
 .App-question {
-  width: 100%; }
-  .App-question div:first-child {
-    text-align: left; }
+  width: 100%;
+  div:first-child {
+    text-align: left;  
+  }
+}
 
 /*.App-button {
   border: solid #cf5816 2px;
@@ -123,15 +153,23 @@
 }
 */
 .App-result-counter {
-  border: solid grey 1px; }
+  border: solid grey 1px;
+}
 
 .App-question-missing {
-  border: solid #ffb700 1px; }
+  border: solid #ffb700 1px;
+}
 
-#date div {
-  display: inline-flex; }
-  #date div:nth-child(1) {
-    margin-right: 5px; }
+#date {
+  div {
+    display: inline-flex;
+
+    &:nth-child(1) {
+      margin-right: 5px;
+    }
+  }
+}
+
 
 .Status-ok {
   background-color: #69676A;
@@ -141,11 +179,14 @@
   background-size: 58vh;
   position: relative;
   font-size: calc(10px + 2vmin);
-  line-height: 5vh; }
-  .Status-ok .App-button {
+  line-height: 5vh;
+
+  .App-button {
     position: absolute;
     margin: 0;
-    bottom: 4vh; }
+    bottom: 4vh;
+  }
+}
 
 .Status-caution {
   background-color: #69676A;
@@ -155,14 +196,20 @@
   background-size: 53vh;
   position: relative;
   font-size: calc(10px + 2vmin);
-  line-height: 5vh; }
-  .Status-caution .App-button {
+  line-height: 5vh;
+
+  .App-button {
     position: absolute;
     margin: 0;
-    bottom: 4vh; }
+    bottom: 4vh;
+  }
+} 
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg);
+  }
+}
