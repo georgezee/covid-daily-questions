@@ -133,7 +133,16 @@ $primaryDark: #0B4467;
 }
 
 .App-question-missing {
-  border: solid #ffb700 1px;
+  .Question-text {
+    border-left: solid #ffb700 5px;
+    padding-left: 5px;
+  }
+
+  &.Instruction {
+    font-weight: bold;
+    border-bottom: solid #ffb700 3px;
+    padding-bottom: 7px;
+  }
 }
 
 #date {

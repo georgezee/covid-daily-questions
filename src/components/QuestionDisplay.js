@@ -18,7 +18,7 @@ class QuestionDisplay extends React.Component {
     let missingAnswersMessage = "";
 
     if (this.props.highlightMissing) {
-      missingAnswersMessage = <div className="App-question-missing">Answer the missing questions to proceed.</div>
+      missingAnswersMessage = <div className="App-question-missing Instruction">Answer the missing questions to proceed.</div>
     }
 
     return (

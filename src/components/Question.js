@@ -2,7 +2,7 @@ import React from 'react';
 
 const Question = ({title}) => {
   return (
-    <div>
+    <div className="Question-text">
       {title}
     </div>
   )
