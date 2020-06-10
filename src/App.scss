@@ -82,7 +82,7 @@ $primaryDark: #0B4467;
   overflow: scroll;
   background-color: #BCBBA9;
   color: #69676A;
-  font-size: 4vh;
+  font-size: 2.4vh;
 
   a {
     color: $primaryColor;
@@ -139,6 +139,8 @@ $primaryDark: #0B4467;
 #date {
   div {
     display: inline-flex;
+    font-weight: bold;
+    text-transform: uppercase;
 
     &:nth-child(1) {
       margin-right: 5px;
@@ -154,11 +156,27 @@ $primaryDark: #0B4467;
   font-size: calc(10px + 2vmin);
   line-height: 5vh;
 
+  #date {
+    font-size: 350%;
+    line-height: 150%;
+    position: fixed;
+    top: 5%;
+  }
+
   .App-button {
     position: absolute;
     margin: 0;
     bottom: 4vh;
   }
+}
+
+.Status-message {
+  font-size: 250%;
+  color: #9e1905;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: fixed;
+  top: 60%;
 }
 
 .Status-ok {

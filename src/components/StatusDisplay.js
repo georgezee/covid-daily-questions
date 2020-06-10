@@ -6,17 +6,18 @@ import BackButton from './BackButton';
 const StatusDisplay = ({status, handleBack, acceptCount, cautionCount}) => {
 
   let statusClass = "App-main Status-display";
+  let statusMessage = "";
   if (status === "ok") {
     statusClass += " Status-ok";
   } else {
     statusClass += " Status-caution";
+    statusMessage = <div className="Status-message">Check</div>;
   }
 
   return (
     <div className={statusClass}>
       <DateToday/>
-      {status}
-      <ResultsCounter acceptCount={acceptCount} cautionCount={cautionCount}/>
+      {statusMessage}
       <BackButton handleBack={handleBack}/>
     </div>
   )
