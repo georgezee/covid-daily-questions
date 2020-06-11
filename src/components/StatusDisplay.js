@@ -1,6 +1,5 @@
 import React from 'react';
 import DateToday from './DateToday';
-import ResultsCounter from './ResultsCounter';
 import BackButton from './BackButton';
 
 const StatusDisplay = ({status, handleBack, acceptCount, cautionCount}) => {
