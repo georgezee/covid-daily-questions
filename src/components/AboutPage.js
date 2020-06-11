@@ -24,7 +24,7 @@ const AboutPage = ({visible, handleClick}) => {
       <ol>
         <li>At the entrance of your building, maybe while standing in line, have visitors scan a QR code or enter the short URL on their phone</li>
         <li>Visitor answers the questionnaire on their phone</li>
-        <li>At the entrance have the visitor show the result</li>
+        <li>At the entrance have the visitor show the result. All without physical contact. 😊</li>
       </ol>
       </p>
       <br/>
