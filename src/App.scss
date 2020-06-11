@@ -1,12 +1,14 @@
 $primaryColor: #1783d6;
-$primaryDark: #0B4467;
+$primaryDark: #0b4467;
+$secondaryColor: #ffb700;
+$secondaryDark: #a57804;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .App {
   text-align: center;
-  background-color: #737274;
-  color: white;
+  background-color: #fff;
+  color: black;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -19,7 +21,7 @@ $primaryDark: #0B4467;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   background-color: $primaryColor;
-  color: #ffffff;
+  color: white;
   position: relative;
   border-bottom: solid $primaryDark 2px;
 
@@ -39,13 +41,14 @@ $primaryDark: #0B4467;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2.2vmin);
-  color: white;
+  font-weight: 500;
+  color: black;
   text-align: center;
   padding: 0 5vw;
   margin-top: 6%;
 
   .App-button {
-    margin: 15px 20px 30px 20px;
+    margin: 15px 16px 30px 16px;
     display: inline-block;
     line-height: 120%;
   }
@@ -122,19 +125,25 @@ $primaryDark: #0B4467;
   background-color: #2081ca;
 }
 
+.App-button-selected {
+  border: solid $secondaryColor 3px;
+  box-shadow: 2px 2px 2px $secondaryDark;
+  padding: 4px;
+}
+
 .App-result-counter {
   border: solid grey 1px;
 }
 
 .App-question-missing {
   .Question-text {
-    border-left: solid #ffb700 5px;
+    border-left: solid $secondaryColor 5px;
     padding-left: 5px;
   }
 
   &.Instruction {
     font-weight: bold;
-    border-bottom: solid #ffb700 3px;
+    border-bottom: solid $secondaryColor 3px;
     padding-bottom: 7px;
   }
 }
@@ -158,6 +167,7 @@ $primaryDark: #0B4467;
   position: relative;
   font-size: calc(10px + 2vmin);
   line-height: 5vh;
+  color: white;
 
   #date {
     font-size: 350%;
@@ -175,7 +185,7 @@ $primaryDark: #0B4467;
 
 .Status-message {
   font-size: 250%;
-  color: #9e1905;
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   position: fixed;

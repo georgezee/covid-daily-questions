@@ -12,13 +12,13 @@ const AnswerButton = ({title, answerState, handleAnswer, questionID, answerType}
   if (answerState === answerType) {
       className += " App-button-selected"
 
-      if (answerState === "accept") {
-        icon = "✔️";
-      }
+      // if (answerState === "accept") {
+      //   icon = "✔️";
+      // }
 
-      if (answerState === "caution") {
-        icon = "⚠️";
-      }
+      // if (answerState === "caution") {
+      //   icon = "⚠️";
+      // }
   }
 
   return (
