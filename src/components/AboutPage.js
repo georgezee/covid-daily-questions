@@ -5,10 +5,11 @@ const AboutPage = ({visible, handleClick}) => {
 
   return (
     <div className="App-about-page" style={{display: visible ? 'block' : 'none' }}>
-      Covid-Daily-Questions<br/>
+      Are you feeling fine?
       <hr/>
       <p>
-        This is intended as a simple web page that can ask users a daily questionnaire and share the status as a clear indicator on a daily basis.<br/>
+        Answer these Covid questions daily - and show at the entrance to your school, work or other public place (from a safe distance!).<br/>
+        Show that you've considered your health and the safety of others by showing the status of your questions.
       </p>
 
       <p>
@@ -17,15 +18,7 @@ const AboutPage = ({visible, handleClick}) => {
 
       <p>
         Background:<br/>
-        This is an open information initiative that began at the <a href="https://codebridge.org.za/">Cape Town Codebridge</a> community evenings.<br/>
-      </p>
-      <p>
-      Possible use case: : 
-      <ol>
-        <li>At the entrance of your building, maybe while standing in line, have visitors scan a QR code or enter the short URL on their phone</li>
-        <li>Visitor answers the questionnaire on their phone</li>
-        <li>At the entrance have the visitor show the result. All without physical contact. 😊</li>
-      </ol>
+        This is an open initiative that began at the <a href="https://codebridge.org.za/">Cape Town Codebridge</a> community evenings.<br/>
       </p>
       <br/>
       <a href="https://github.com/georgezee/covid-daily-questions">&lt;View the source on Github/&gt;</a>
