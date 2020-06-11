@@ -19,6 +19,14 @@ const AboutPage = ({visible, handleClick}) => {
         Background:<br/>
         This is an open information initiative that began at the <a href="https://codebridge.org.za/">Cape Town Codebridge</a> community evenings.<br/>
       </p>
+      <p>
+      Possible use case: : 
+      <ol>
+        <li>At the entrance of your building, maybe while standing in line, have visitors scan a QR code or enter the short URL on their phone</li>
+        <li>Visitor answers the questionnaire on their phone</li>
+        <li>At the entrance have the visitor show the result</li>
+      </ol>
+      </p>
       <br/>
       <a href="https://github.com/georgezee/covid-daily-questions">&lt;View the source on Github/&gt;</a>
       <Button handleClick={handleClick} title="close"/>
