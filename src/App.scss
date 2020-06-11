@@ -37,7 +37,7 @@ $secondaryDark: #a57804;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2.2vmin);
-  font-weight: 500;
+  font-weight: 400;
   color: black;
   text-align: center;
   padding: 0 5vw;
@@ -84,7 +84,7 @@ $secondaryDark: #a57804;
   }
 
   .App-button {
-    margin: 40px 20px 25px 20px;
+    margin: 40px 20px 50px 20px;
   }
 }
 
@@ -196,5 +196,6 @@ $secondaryDark: #a57804;
 
 .Status-caution {
   background-color: #721f11;
-  background-image: url("Images/delete_Circle-X_9E1905.svg");
+  background-image: url("Images/question_circle.svg");
+  background-size: 70%;
 }
