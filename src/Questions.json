@@ -22,6 +22,20 @@
   ],
   [
     {
+      "question" : "Do you have an unusual headache?",
+      "accepted" : "No",
+      "cautioned" : "Yes"
+    }
+  ],
+  [
+    {
+      "question" : "Do you have diarrhoea?",
+      "accepted" : "No",
+      "cautioned" : "Yes"
+    }
+  ],
+  [
+    {
       "question" : "Do you feel weak and tired today?",
       "accepted" : "No",
       "cautioned" : "Yes"
