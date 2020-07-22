@@ -30,6 +30,14 @@ $secondaryDark: #a57804;
   }
 }
 
+.App-questions-header {
+  position: relative;
+  top: -2px;
+}
+.App-questions-header strong {
+  white-space:nowrap;
+}
+
 .App-main {
   min-height: 85vh;
   display: flex;

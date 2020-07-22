@@ -29,6 +29,10 @@ class QuestionDisplay extends React.Component {
         </div>
         </header>
         <div className="App-main">
+          <div className="App-questions-header">
+            Do you have any of the following <strong>COVID-related</strong> symptoms?
+            <br/><br/>
+          </div>
         {this.props.questions.map((itemArray, i) => {
 
           // Questions kept in an array to allow future alternate question phrasing per question.
